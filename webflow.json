@@ -1,0 +1,17 @@
+{
+  "library": {
+    "name": "MUI Components - KC",
+    "components": [
+      "./src/**/*.webflow.@(js|jsx|mjs|ts|tsx)"
+    ],
+    "description": "Select Components from Material-UI Library",
+    "id": "mui-components---kc"
+  },
+  "telemetry": {
+    "global": {
+      "allowTelemetry": true,
+      "lastPrompted": 1758916064727,
+      "version": "1.8.44"
+    }
+  }
+}
