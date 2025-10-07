@@ -25,9 +25,11 @@ interface ModalProps {
   buttonType?: "text" | "outlined" | "contained";
   title: string;
   details: string;
+  modalID: string;
+  modalDescription: string;
 }
 
-export const BasicModal = ({ isOpen, buttonText, buttonType = "contained", title, details }: ModalProps) => {
+export const BasicModal = ({ isOpen, buttonText, buttonType = "contained", title, details, modalID, modalDescription }: ModalProps) => {
   const [open, setOpen] = React.useState(isOpen);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -40,15 +42,15 @@ export const BasicModal = ({ isOpen, buttonText, buttonType = "contained", title
         <Modal
           open={open}
           onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          aria-labelledby={modalID}
+          aria-describedby={modalDescription}
           container={() => hostRef.current || document.body}
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            <Typography id={modalID} variant="h6" component="h2">
               {title}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <Typography id={modalDescription} sx={{ mt: 2 }}>
               {details}
             </Typography>
           </Box>

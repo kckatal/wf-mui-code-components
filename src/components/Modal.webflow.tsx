@@ -21,6 +21,14 @@ export default declareComponent(BasicModal, {
     details: props.Text({
       name: "Details",
       defaultValue: "Modal"
+    }),
+    modalID: props.Text({
+      name: "Modal ID",
+      defaultValue: "modal-modal-title"
+    }),
+    modalDescription: props.Text({
+      name: "Modal Description",
+      defaultValue: "modal-modal-description"
     })
   },
 });
