@@ -6,21 +6,17 @@ export default declareComponent(BasicModal, {
   name: "Basic Modal",
   description: "Basic Modal component",
   props: {
-    isOpen: props.Boolean({
-      name: "Is Open",
-      defaultValue: false
-    }),
     buttonText: props.Text({
       name: "Button Text",
       defaultValue: "Open Modal"
     }),
     title: props.Text({
       name: "Title",
-      defaultValue: "Modal"
+      defaultValue: "Title"
     }),
     details: props.Text({
       name: "Details",
-      defaultValue: "Modal"
+      defaultValue: "Details"
     }),
     modalID: props.Text({
       name: "Modal ID",

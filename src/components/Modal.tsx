@@ -20,7 +20,6 @@ const style = {
 };
 
 interface ModalProps {
-  isOpen: boolean;
   buttonText: string;
   buttonType?: "text" | "outlined" | "contained";
   title: string;
@@ -29,8 +28,8 @@ interface ModalProps {
   modalDescription: string;
 }
 
-export const BasicModal = ({ isOpen, buttonText, buttonType = "contained", title, details, modalID, modalDescription }: ModalProps) => {
-  const [open, setOpen] = React.useState(isOpen);
+export const BasicModal = ({ buttonText, buttonType = "contained", title, details, modalID, modalDescription }: ModalProps) => {
+  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const hostRef = React.useRef<HTMLDivElement | null>(null);
